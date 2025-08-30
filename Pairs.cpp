@@ -1,10 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Student
+class Student
 {
+public:
     string name;
     int roll;
+
+    Student(string name, int roll)
+    {
+        this->name = name;
+        this->roll = roll;
+    }
 };
 
 class cmp
@@ -33,7 +40,7 @@ int main()
         int roll;
         cin >> name >> roll;
 
-        pq.push({name, roll});
+        pq.push(Student(name, roll));
     }
 
     while (!pq.empty())
